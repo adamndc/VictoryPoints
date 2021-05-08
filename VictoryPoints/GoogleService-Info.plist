@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>726128421007-5emiip75kj8hquitlteahjv5jdeeo7es.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.726128421007-5emiip75kj8hquitlteahjv5jdeeo7es</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBBP-mVVvFr3fJyS89syaTGFZGdK6P1cDo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>726128421007</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Adam-Del-Castillo.VictoryPoints</string>
+	<key>PROJECT_ID</key>
+	<string>victorypoints-e1aa0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>victorypoints-e1aa0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:726128421007:ios:433744df59cb1355a7a8fa</string>
+</dict>
+</plist>

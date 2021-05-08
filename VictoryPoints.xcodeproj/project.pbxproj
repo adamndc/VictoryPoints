@@ -13,9 +13,12 @@
 		8B0A5264264632090050A673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A5262264632090050A673 /* Main.storyboard */; };
 		8B0A52662646320A0050A673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A52652646320A0050A673 /* Assets.xcassets */; };
 		8B0A52692646320A0050A673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A52672646320A0050A673 /* LaunchScreen.storyboard */; };
+		8B0A5272264636A50050A673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A5271264636A50050A673 /* GoogleService-Info.plist */; };
+		D624D6E727FC585B7B783968 /* Pods_VictoryPoints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0153A225848B5F75FFFBC68C /* Pods_VictoryPoints.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0153A225848B5F75FFFBC68C /* Pods_VictoryPoints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VictoryPoints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A5259264632090050A673 /* VictoryPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictoryPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A525C264632090050A673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B0A525E264632090050A673 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		8B0A52652646320A0050A673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B0A52682646320A0050A673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0A526A2646320A0050A673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B0A5271264636A50050A673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DC1323A6CB73E4818C4274F /* Pods-VictoryPoints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VictoryPoints.debug.xcconfig"; path = "Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints.debug.xcconfig"; sourceTree = "<group>"; };
+		EBC19C8F0F8D17281DACB489 /* Pods-VictoryPoints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VictoryPoints.release.xcconfig"; path = "Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D624D6E727FC585B7B783968 /* Pods_VictoryPoints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				8B0A525B264632090050A673 /* VictoryPoints */,
 				8B0A525A264632090050A673 /* Products */,
+				8C808A448B16BE647B8E86AF /* Pods */,
+				96EA93E6F7F3777E88118838 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +71,28 @@
 				8B0A5262264632090050A673 /* Main.storyboard */,
 				8B0A52652646320A0050A673 /* Assets.xcassets */,
 				8B0A52672646320A0050A673 /* LaunchScreen.storyboard */,
+				8B0A5271264636A50050A673 /* GoogleService-Info.plist */,
 				8B0A526A2646320A0050A673 /* Info.plist */,
 			);
 			path = VictoryPoints;
+			sourceTree = "<group>";
+		};
+		8C808A448B16BE647B8E86AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1323A6CB73E4818C4274F /* Pods-VictoryPoints.debug.xcconfig */,
+				EBC19C8F0F8D17281DACB489 /* Pods-VictoryPoints.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		96EA93E6F7F3777E88118838 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0153A225848B5F75FFFBC68C /* Pods_VictoryPoints.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B0A526D2646320A0050A673 /* Build configuration list for PBXNativeTarget "VictoryPoints" */;
 			buildPhases = (
+				FD112790F50E1D471E007EBF /* [CP] Check Pods Manifest.lock */,
 				8B0A5255264632090050A673 /* Sources */,
 				8B0A5256264632090050A673 /* Frameworks */,
 				8B0A5257264632090050A673 /* Resources */,
+				AD3E8A2692D11E1E26D633C2 /* [CP] Embed Pods Frameworks */,
+				813A1F6309C953321E1C8841 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,12 +156,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0A52692646320A0050A673 /* LaunchScreen.storyboard in Resources */,
+				8B0A5272264636A50050A673 /* GoogleService-Info.plist in Resources */,
 				8B0A52662646320A0050A673 /* Assets.xcassets in Resources */,
 				8B0A5264264632090050A673 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		813A1F6309C953321E1C8841 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD3E8A2692D11E1E26D633C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD112790F50E1D471E007EBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VictoryPoints-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B0A5255264632090050A673 /* Sources */ = {
@@ -283,6 +374,7 @@
 		};
 		8B0A526E2646320A0050A673 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DC1323A6CB73E4818C4274F /* Pods-VictoryPoints.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +394,7 @@
 		};
 		8B0A526F2646320A0050A673 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBC19C8F0F8D17281DACB489 /* Pods-VictoryPoints.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
