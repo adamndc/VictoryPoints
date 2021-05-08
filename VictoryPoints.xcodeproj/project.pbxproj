@@ -3,17 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8B0A525D264632090050A673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A525C264632090050A673 /* AppDelegate.swift */; };
 		8B0A525F264632090050A673 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A525E264632090050A673 /* SceneDelegate.swift */; };
-		8B0A5261264632090050A673 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A5260264632090050A673 /* ViewController.swift */; };
+		8B0A5261264632090050A673 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A5260264632090050A673 /* LoginViewController.swift */; };
 		8B0A5264264632090050A673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A5262264632090050A673 /* Main.storyboard */; };
 		8B0A52662646320A0050A673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A52652646320A0050A673 /* Assets.xcassets */; };
 		8B0A52692646320A0050A673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A52672646320A0050A673 /* LaunchScreen.storyboard */; };
 		8B0A5272264636A50050A673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A5271264636A50050A673 /* GoogleService-Info.plist */; };
+		8BCDDBA226471B49007AB677 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCDDBA126471B49007AB677 /* DashboardViewController.swift */; };
+		8BCDDBA526472085007AB677 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCDDBA426472085007AB677 /* NewGameViewController.swift */; };
+		8BCDDBC826473C0F007AB677 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCDDBC726473C0F007AB677 /* Game.swift */; };
+		8BCDDBCC26473D6A007AB677 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCDDBCB26473D6A007AB677 /* Player.swift */; };
 		D624D6E727FC585B7B783968 /* Pods_VictoryPoints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0153A225848B5F75FFFBC68C /* Pods_VictoryPoints.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +26,16 @@
 		8B0A5259264632090050A673 /* VictoryPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictoryPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A525C264632090050A673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B0A525E264632090050A673 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B0A5260264632090050A673 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B0A5260264632090050A673 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8B0A5263264632090050A673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B0A52652646320A0050A673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B0A52682646320A0050A673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0A526A2646320A0050A673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0A5271264636A50050A673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BCDDBA126471B49007AB677 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		8BCDDBA426472085007AB677 /* NewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		8BCDDBC726473C0F007AB677 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8BCDDBCB26473D6A007AB677 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9DC1323A6CB73E4818C4274F /* Pods-VictoryPoints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VictoryPoints.debug.xcconfig"; path = "Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints.debug.xcconfig"; sourceTree = "<group>"; };
 		EBC19C8F0F8D17281DACB489 /* Pods-VictoryPoints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VictoryPoints.release.xcconfig"; path = "Target Support Files/Pods-VictoryPoints/Pods-VictoryPoints.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,12 +75,16 @@
 			children = (
 				8B0A525C264632090050A673 /* AppDelegate.swift */,
 				8B0A525E264632090050A673 /* SceneDelegate.swift */,
-				8B0A5260264632090050A673 /* ViewController.swift */,
+				8BCDDBC726473C0F007AB677 /* Game.swift */,
+				8BCDDBCB26473D6A007AB677 /* Player.swift */,
+				8B0A5260264632090050A673 /* LoginViewController.swift */,
+				8BCDDBA126471B49007AB677 /* DashboardViewController.swift */,
+				8BCDDBA426472085007AB677 /* NewGameViewController.swift */,
 				8B0A5262264632090050A673 /* Main.storyboard */,
 				8B0A52652646320A0050A673 /* Assets.xcassets */,
 				8B0A52672646320A0050A673 /* LaunchScreen.storyboard */,
-				8B0A5271264636A50050A673 /* GoogleService-Info.plist */,
 				8B0A526A2646320A0050A673 /* Info.plist */,
+				8B0A5271264636A50050A673 /* GoogleService-Info.plist */,
 			);
 			path = VictoryPoints;
 			sourceTree = "<group>";
@@ -83,7 +95,6 @@
 				9DC1323A6CB73E4818C4274F /* Pods-VictoryPoints.debug.xcconfig */,
 				EBC19C8F0F8D17281DACB489 /* Pods-VictoryPoints.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,9 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B0A5261264632090050A673 /* ViewController.swift in Sources */,
+				8B0A5261264632090050A673 /* LoginViewController.swift in Sources */,
 				8B0A525D264632090050A673 /* AppDelegate.swift in Sources */,
+				8BCDDBA526472085007AB677 /* NewGameViewController.swift in Sources */,
+				8BCDDBC826473C0F007AB677 /* Game.swift in Sources */,
+				8BCDDBCC26473D6A007AB677 /* Player.swift in Sources */,
 				8B0A525F264632090050A673 /* SceneDelegate.swift in Sources */,
+				8BCDDBA226471B49007AB677 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
