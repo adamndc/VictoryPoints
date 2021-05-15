@@ -11,4 +11,5 @@ target 'VictoryPoints' do
   pod 'Firebase/Firestore'
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
+  pod 'Charts'
 end
