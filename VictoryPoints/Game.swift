@@ -8,29 +8,19 @@
 import Foundation
 import Firebase
 
-class Game {
+class Game: NSObject {
     var title: String
-    var date: Date
+//    var date: Date
     var postingUserID: String
     var rolls: [Int]
     var points: [Int]
+    var names: [String]
     var documentID: String
     var complete: Bool
     var victory: Int
     
-    init(title: String, date: Date, postingUserID: String, rolls: [Int], points: [Int], documentID: String, complete: Bool, victory: Int) {
-        self.title = title
-        self.date = date
-        self.postingUserID = postingUserID
-        self.rolls = rolls
-        self.points = points
-        self.documentID = documentID
-        self.complete = complete
-        self.victory = victory
-    }
-    
     var dictionary: [String: Any] {
-        return ["title": title, "date": date, "postingUserID": postingUserID, "rolls": rolls, "points": points, "complete": complete, "victory": victory]
+        return ["title": title, "postingUserID": postingUserID, "rolls": rolls, "points": points, "names": names, "complete": complete, "victory": victory]
     }
     
     var frequency: [Int: Int] {
@@ -46,20 +36,57 @@ class Game {
         return toReturn
     }
     
-    convenience init() {
-        self.init(title: "", date: Date(), postingUserID: "", rolls: [], points: [0,0,0,0], documentID: "", complete: false, victory: 0)
+    var playerString: String {
+        var toReturn = ""
+        for name in names {
+            if name != "" {
+                toReturn.append("\(name), ")
+            }
+        }
+        toReturn.removeLast(2)
+        return toReturn
     }
     
-//    convenience init(dictionary: [String: Any]) {
-//        let title = dictionary["title"] ?? ""
-//        let password = dictionary["password"] ?? ""
-//        let date = dictionary["date"] ?? Date()
-//        let postingUserID = dictionary["postingUserID"] ?? ""
-//        let rolls = dictionary["rolls"] ?? []
-//        let players = dictionary["players"] ?? []
-//        let complete = dictionary["complete"] ?? false
-//        self.init(title: title, password: password, date: date, postingUserID: postingUserID, rolls: rolls, players:players, documentID: "", complete: complete)
-//    }
+    var playerCount: Int {
+        var count = 0
+        for name in names {
+            if name != "" {
+                count += 1
+            }
+        }
+        return count
+    }
+    
+    init(title: String, postingUserID: String, rolls: [Int], points: [Int], names: [String], documentID: String, complete: Bool, victory: Int) {
+        self.title = title
+//        self.date = date
+        self.postingUserID = postingUserID
+        self.rolls = rolls
+        self.points = points
+        self.names = names
+        self.documentID = documentID
+        self.complete = complete
+        self.victory = victory
+    }
+    
+    override convenience init() {
+        let postingUserID = Auth.auth().currentUser?.uid ?? ""
+        self.init(title: "",  postingUserID: postingUserID, rolls: [], points: [2,2,2,2], names: ["","","",""], documentID: "", complete: false, victory: 0)
+    }
+    
+    convenience init(dictionary: [String: Any]) {
+        let title = dictionary["title"] as! String? ?? ""
+//        let timeIntervatDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
+//        let date = Date(timeIntervalSince1970: timeIntervatDate)
+        let postingUserID = dictionary["postingUserID"] as! String? ?? ""
+        let rolls = dictionary["rolls"] as? [Int] ?? [Int]()
+        let points = dictionary["points"] as? [Int] ?? [Int]()
+        let names = dictionary["names"] as? [String] ?? [String]()
+        let complete = dictionary["complete"] as! Bool? ?? false
+        let victory = dictionary["victory"] as! Int? ?? 0
+        
+        self.init(title: title, postingUserID: postingUserID, rolls: rolls, points: points, names: names, documentID: "", complete: complete, victory: victory)
+    }
     
     func saveData(completion: @escaping (Bool) -> ()) {
         let db = Firestore.firestore()

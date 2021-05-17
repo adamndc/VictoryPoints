@@ -26,32 +26,46 @@ class Games {
         for game in gameArray {
             results.append(game.victory)
         }
-        return results.histogram[1]!
+        return results.histogram[1] ?? 0
+    }
+    
+    var winPercentage: Double {
+        if gameArray.isEmpty {
+            return 0.00
+        }
+        return Double(self.winCount) / Double(gameArray.count) * 100
+    }
+    
+    var averageScore: Double {
+        if gameArray.isEmpty {
+            return 0
+        }
+        var tracking = 0.0
+        for game in gameArray {
+            tracking += Double(game.points[0])
+        }
+        return tracking / Double(gameArray.count)
     }
     
     init() {
-//        db = Firestore.firestore()
-        gameArray.append(Game(title: "Game Night", date: Date(timeIntervalSince1970: 1620772200), postingUserID: "", rolls: generateRolls(numRolls: 67), points: [10,9,8,6], documentID: "", complete: true, victory: 1))
-        gameArray.append(Game(title: "Last One", date: Date(timeIntervalSince1970: 1620252032), postingUserID: "", rolls: generateRolls(numRolls: 57), points: [3,9,6,10], documentID: "", complete: true, victory: 0))
-        gameArray.append(Game(title: "Study Break", date: Date(timeIntervalSince1970: 1620772200), postingUserID: "", rolls: generateRolls(numRolls: 87), points: [4,6,7,10], documentID: "", complete: true, victory: 0))
-        gameArray.append(Game(title: "Feeling Lucky", date: Date(timeIntervalSince1970: 1610399188), postingUserID: "", rolls: generateRolls(numRolls: 41), points: [4,6,10,7], documentID: "", complete: true, victory: 1))
-        gameArray.append(Game(title: "Last Night Game", date: Date(timeIntervalSince1970: 1613801587), postingUserID: "", rolls: generateRolls(numRolls: 92), points: [11,4,8,9], documentID: "", complete: true, victory: 0))
-        gameArray.append(Game(title: "Drinking Catan?", date: Date(timeIntervalSince1970: 1620772200), postingUserID: "", rolls: generateRolls(numRolls: 55), points: [5,8,8,10], documentID: "", complete: true, victory: 1))
+        db = Firestore.firestore()
     }
     
-//    func loadData(completed: @escaping () -> ()) {
-//        db.collection("games").addSnapshotListener { (querySnapshot, error) in
-//            guard error == nil else {
-//                print("😡 ERROR: adding snapshot listener \(error!.localizedDescription)")
-//                return completed()
-//            }
-//            self.gameArray = [] //clean out existing spotArray since new data will load
-//            for document in querySnapshot!.documents {
-//                let game = Game(dictionary: document.data())
-//                game.documentID = document.documentID
-//                self.gameArray.append(game)
-//            }
-//            completed()
-//        }
-//    }
+    func loadData(completed: @escaping () -> ()) {
+        db.collection("games").addSnapshotListener { (querySnapshot, error) in
+            guard error == nil else {
+                print("😡 ERROR: adding snapshot listener \(error!.localizedDescription)")
+                return completed()
+            }
+            self.gameArray = [] //clean out existing spotArray since new data will load
+            for document in querySnapshot!.documents {
+                let game = Game(dictionary: document.data())
+                game.documentID = document.documentID
+                if game.postingUserID == Auth.auth().currentUser?.uid {
+                    self.gameArray.append(game)
+                }
+            }
+            completed()
+        }
+    }
 }

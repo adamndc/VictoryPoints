@@ -33,10 +33,27 @@ class DashboardViewController: UIViewController {
         sortBasedOnSegmentPressed()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        games.loadData {
+            self.sortBasedOnSegmentPressed()
+            self.updateUserInterface()
+            self.tableView.reloadData()
+        }
+    }
+    
     func updateUserInterface() {
         gamesPlayedLabel.text = "\(games.gameArray.count)"
-        winPercentageLabel.text = "\(Double(games.winCount) / Double(games.gameArray.count) * 100)%"
-        
+        winPercentageLabel.text = String(format: "%.1f", games.winPercentage) + "%"
+        averageScoreLabel.text = String(format: "%.2f", games.averageScore)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowGameDetail" {
+            let destination = segue.destination as! InGameTableViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            destination.game = games.gameArray[selectedIndexPath.row]
+        }
     }
     
     func configureSegmentedControl() {
@@ -53,14 +70,17 @@ class DashboardViewController: UIViewController {
     func sortBasedOnSegmentPressed() {
         switch sortSegmentedControl.selectedSegmentIndex {
         case 0:
-            games.gameArray.sort(by: {$0.date < $1.date})
+            games.gameArray.sort(by: {$0.points[0] > $1.points[0]})
         case 1:
             games.gameArray.sort(by: {$0.victory > $1.victory})
+        case 2:
+            games.gameArray.sort(by: {$0.playerCount > $1.playerCount})
         default:
             print("HEY! You shouldn't have gotten here. Check out the segmented control")
         }
         tableView.reloadData()
     }
+    
     @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
     }
