@@ -1,4 +1,7 @@
 # VictoryPoints
 
 ## What is VictoryPoints?
-VictoryPoints was the culminating project for my iOS App Development course at Boston College.
+VictoryPoints was the culminating project for my iOS App Development course at Boston College. The purpose of the app was to build a stat tracker for the popular board game, Settlers of Catan. It tracks very basic game details, although it could be expanded to encompass many more aspects of the game. This project was built using Swift Storyboards on xcode along with a few external dependecies managed via cocoapods, namely Google Firestore and iOS Charts. I initally wanted users to be able to simultaneously login to the same game and each track their own stats, however the time contraints made this quite difficult. I instead went for a pared down version in which one person logs all the points and rolls in a game. Each user's games are stored in a Firebase server, enabling cross device saves and general data accessibility via the cloud. iOS Charts was used to create a visualization of the rolls in a game in real time. 
+
+## Motivation behind VictoryPoints
+I found myself playing a lot more boardgames over the past year of pandemic life, so I thought this would be a fun project to make for myself. Settlers of Catan has been a favorite for me and my suitemates; we often play upwards of 4 games a week. There is a popular Catan website I use often when playing with internation friends called colonist.io I really enjoyed the stats the website displays at the end of the game, and wanted to provide that same stat tracking for my in person games, thus the idea for VictoryPoints was born. 
